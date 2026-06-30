@@ -7,7 +7,6 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "formatter": "auto",
   "icon_theme": {
     "mode": "light",
     "light": "Warm Charmed Icons",
@@ -17,12 +16,6 @@
     "diagnostics": false,
     "metrics": false,
     "anthropic_retention": false,
-  },
-  "vim_mode": true,
-  "agent_servers": {
-    "claude-acp": {
-      "type": "registry",
-    },
   },
   "base_keymap": null,
   "ui_font_size": 16,
@@ -106,17 +99,16 @@
   },
   "lsp": {
     "rust-analyzer": {
-      "enable_lsp_tasks": true,
+      "enable_lsp_tasks": false,
+      "cargo": {
+        "allFeatures": false,
+      },
     },
   },
   "languages": {
     "Rust": {
-      "formatter": {
-        "external": {
-          "command": "rustfmt",
-        },
-      },
+      "formatter": null
     },
   },
-  "format_on_save": "on",
+  "format_on_save": "off",
 }
