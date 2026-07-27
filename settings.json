@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "ui_font_family": ".ZedSans",
+  "buffer_font_family": ".ZedMono",
+  "cli_default_open_behavior": "existing_window",
   "icon_theme": {
     "mode": "light",
     "light": "Warm Charmed Icons",
@@ -23,7 +26,7 @@
   "theme": {
     "mode": "dark",
     "light": "One Light",
-    "dark": "Visual Assist Dark",
+    "dark": "Ferra",
   },
   "theme_overrides": {
     "Visual Assist Dark": {
@@ -41,6 +44,24 @@
         },
       },
       "tab_bar.background": "#202020",
+      "tab.active_background": "#00000000",
+      "tab.inactive_background": "#00000000",
+    },
+    "Ferra": {
+      "border.variant": "#2b292d",
+      "border": "#2b292d",
+      "title_bar.background": "#2b292d",
+      "panel.background": "#2b292d",
+      "panel.focused_border": "#00000000",
+      "syntax": {
+        "comment": {
+          "font_style": "italic",
+        },
+        "comment.doc": {
+          "font_style": "italic",
+        },
+      },
+      "tab_bar.background": "#2b292d",
       "tab.active_background": "#00000000",
       "tab.inactive_background": "#00000000",
     },
@@ -104,10 +125,21 @@
         "allFeatures": false,
       },
     },
+    "clangd": {
+      "binary": {
+        "path": "C:/msys64/mingw64/bin/clangd.exe",
+      },
+      "initialization_options": {
+        "clangdFileStatus": true,
+      },
+    },
   },
   "languages": {
     "Rust": {
-      "formatter": null
+      "formatter": null,
+    },
+    "C++": {
+      "formatter": null,
     },
   },
   "format_on_save": "off",
